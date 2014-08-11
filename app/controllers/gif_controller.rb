@@ -7,6 +7,7 @@ end
 def create
   @gif = Gif.create(permitted_parameters)
   if @gif.save
+    flash[:notice] = "gif created successfully"
     redirect_to root_path
   else
     render :new

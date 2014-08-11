@@ -1,5 +1,12 @@
 <h2>Welcome</h2>
-
+<p></p>
 <%= link_to "About", about_index_path %>
 
 <%= link_to "New gif", new_gif_path %>
+<p></p>
+<% @gifs.each do |gif| %>
+<img src="<%= gif.url %>"/>
+  <p></p>
+<%= gif.title %>
+<p></p>
+<% end %>
